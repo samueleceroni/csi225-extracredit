@@ -1,0 +1,22 @@
+.card-img{
+    max-width: 240px;
+}
+
+.cursor-pointer{
+    cursor: pointer;
+}
+
+.hover-invert:not(.active-secondary):hover{
+    color:white;
+    background:black;
+}
+
+.hover-invert:not(.active-secondary):hover{
+    color:white;
+    background:black;
+}
+
+.active-secondary{
+    color:white;
+    background-color:gray;
+}

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+        <!-- Bootstrap CSS -->
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="css/style.css" />
+        <title>Weather</title>
+    </head>
+    <body class="pt-4">
+        <h1 class="pb-3 text-center">Weather</h1>
+        <div class="container mb-3 w-75">
+            <div class="mb-3 text-center mx-auto" id="zip-form-container">
+                <form>
+                    <div class="form-group d-inline-block">
+                        <label for="zip-code">Zip Code</label>
+                        <input type="number" class="form-control w-50 mx-auto d-inline-block" id="zip-code" value="10314" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary d-inline-block" id="zip-code-submit">Load weather info</button>
+                </form>
+            </div>
+            <p class="text-center d-none" id="loading-weather">Loading weather info for zip code <b id="zip-code-loading"></b> ...</p>
+            <div class="mt-5 d-none" id="weather-info-container">
+                <div class="d-lg-flex">
+                    <div class="mb-3 mx-auto" style="max-width: 540px;">
+                        <div class="row no-gutters">
+                          <div class="col-lg-4 col-12 my-auto text-center">
+                            <img id="weather-icon" src="#" class="card-img" alt="weather-icon">
+                          </div>
+                          <div class="col-lg-8 col-12">
+                            <div class="card-body text-center">
+                              <h5 class="card-title" id="location-name">Location</h5>
+                              <p class="card-text" id="main-weather"></p>
+                              <p class="card-text"><small id="main-weather-desc"></small></p>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                    <table class="table table-striped w-25 mx-auto text-center">
+                        <tbody>
+                            <tr>
+                                <td>Temp</td>
+                                <td id="temp">12°F</td>
+                            </tr>
+                            <tr>
+                                <td>Feels like</td>
+                                <td id="feels-like"></td>
+                            </tr>
+                            <tr>
+                                <td>Min temp</td>
+                                <td id="min-temp"></td>
+                            </tr>
+                            <tr>
+                                <td>Max temp</td>
+                                <td id="max-temp"></td>
+                            </tr>
+                            <tr>
+                                <td>Pressure</td>
+                                <td id="pressure"></td>
+                            </tr>
+                            <tr>
+                                <td>Humidity</td>
+                                <td id="humidity"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-striped w-25 mx-auto text-center">
+                        <tbody>
+                            <tr>
+                                <td>Wind Speed</td>
+                                <td id="wind-speed">12°F</td>
+                            </tr>
+                            <tr>
+                                <td>Wind direction</td>
+                                <td id="wind-direction"></td>
+                            </tr>
+                            <tr>
+                                <td>Sunrise</td>
+                                <td id="sunrise"></td>
+                            </tr>
+                            <tr>
+                                <td>Sunset</td>
+                                <td id="sunset"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"
+        ></script>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>    
+        <script src="js/script.js"></script>
+    </body>
+</html>
