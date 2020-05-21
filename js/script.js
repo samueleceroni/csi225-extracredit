@@ -33,6 +33,13 @@ jQuery(document).ready(function($){
 
         event.preventDefault();
         var zipCode = $('#zip-code').val();
+
+        if (zipCode == ''){
+            $('p#loading-weather').addClass('d-none');
+            $('div#weather-info-container').addClass('d-none');
+            alert('A zip code is required.');
+            return;
+        }
         $('div#weather-info-container').addClass('d-none');
         $('#zip-code-loading').html(zipCode);
         $('p#loading-weather').removeClass('d-none');
